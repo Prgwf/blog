@@ -2,9 +2,9 @@
 title: Arch折腾总结
 date: 2017-07-16 16:01:57
 categories:
-  - Arch
-tags:
   - Linux
+tags:
+  - ArchLinux
 ---
 ### 分区和挂载
 ```bash

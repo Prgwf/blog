@@ -16,7 +16,7 @@ Install theme and renderers:
 
 ```shell
 $ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant
-$ npm install hexo-renderer-jade@0.3.0 --save
+$ npm install hexo-renderer-pug --save
 $ npm install hexo-renderer-sass --save
 ```
 
@@ -28,21 +28,39 @@ Default config:
 ```YAML
 fancybox: true ## If you want to use fancybox please set the value to true.
 disqus: ## Your disqus_shortname, e.g. username
+uyan: ## Your uyan_id. e.g. 1234567
+livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
+changyan: ## Your changyan appid, e.g. cyrALsXc8
+changyan_conf: ## Your changyan conf, e.g. prod_d8a508c2825ab57eeb43e7c69bba0e8b
 gitment:
   enable: false ## If you want to use Gitment comment system please set the value to true.
   owner: ## Your GitHub ID, e.g. username
   repo: ## The repository to store your comments, make sure you're the repo's owner, e.g. imsun.github.io
   client_id: ## GitHub client ID, e.g. 75752dafe7907a897619
   client_secret: ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
-uyan: ## Your uyan_id. e.g. 1234567
-livere: ## Your livere data-uid, e.g. MTAyMC8zMDAxOC78NTgz
-changyan: ## Your changyan appid, e.g. cyrALsXc8
-changyan_conf: ## You changyan conf, e.g. prod_d8a508c2825ab57eeb43e7c69bba0e8b
+gitalk:
+  enable: false ## If you want to use Gitment comment system please set the value to true.
+  owner:  ## Your GitHub ID, e.g. username
+  repo:  ## The repository to store your comments, make sure you're the repo's owner, e.g. gitalk.github.io
+  client_id:  ## GitHub client ID, e.g. 75752dafe7907a897619
+  client_secret:  ## GitHub client secret, e.g. ec2fb9054972c891289640354993b662f4cccc50
+  admin:  ## Github repo owner and collaborators, only these guys can initialize github issues.
+valine: ## https://valine.js.org
+  enable: false ## If you want to use Valine comment system, please set the value to true.
+  appid: ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+  appkey: ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
+  notify: false ## Mail notifier, see https://github.com/xCss/Valine/wiki/Valine-评论系统中的邮件提醒设置
+  verify: false ## Validation code.
+  placeholder: Just so so ## Comment box placeholders.
+  avatar: 'mm' ## Gravatar type, see https://github.com/xCss/Valine/wiki/avatar-setting-for-valine
+  pageSize: 10 ## Number of comments per page.
+  guest_info: nick,mail,link ## Attributes of reviewers.
+
 google_search: true ## Use Google search, true/false.
-baidu_search: ## Use Baidu search, true/false.
+baidu_search: false ## Use Baidu search, true/false.
 swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
 tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
-self_search: ## Use a jQuery-based local search engine, true/false.
+self_search: false ## Use a jQuery-based local search engine, true/false.
 google_analytics: ## Your Google Analytics tracking id, e.g. UA-42425684-2
 baidu_analytics: ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
 show_category_count: false ## If you want to show the count of categories in the sidebar widget please set the value to true.
@@ -114,10 +132,12 @@ version: 0.0.0
 ```
 - fancybox - Enable [Fancybox](http://fancyapps.com/fancybox/)
 - disqus - [Disqus](https://disqus.com) shortname
-- gitment - [Gitment](https://github.com/imsun/gitment) comment system
 - uyan - [Uyan](http://www.uyan.cc) id
 - livere - [LiveRe](https://livere.com) data-uid
 - changyan - [Changyan](http://changyan.kuaizhan.com) appid
+- gitment - [Gitment](https://github.com/imsun/gitment) comment system
+- gitalk - [Gitalk](https://github.com/gitalk/gitalk) comment system
+- valine - [Valine](https://valine.js.org) comment system
 - google_search - Default search engine
 - baidu_search - Search engine for users in China
 - swiftype - [Swiftype Search](https://swiftype.com) key

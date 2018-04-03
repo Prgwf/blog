@@ -1,5 +1,5 @@
 ---
-title: spfa_check
+title: SPFA判负环
 date: 2018-01-11 13:11:23
 mathjax: true
 categories:

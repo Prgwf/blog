@@ -1,5 +1,5 @@
 ---
-title: Codeforces Round \#456
+title: Codeforces Round #456
 date: 2018-01-08 00:39:30
 mathjax: true
 categories:

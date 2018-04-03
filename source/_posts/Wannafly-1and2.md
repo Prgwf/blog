@@ -1,10 +1,10 @@
 ---
-title: Wannafly 挑战赛1&2听课笔记
+title: Wannafly 挑战赛1 and 2听课笔记
 date: 2017-11-12 21:33:12
 mathjax: true
 categories:
-  - Wannafly
   - algorithm
+  - Wannafly
 tags:
 ---
 第一场
