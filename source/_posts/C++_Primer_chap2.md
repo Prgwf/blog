@@ -26,12 +26,12 @@ tags:
 指向常量的指针(pointer to const)  
 ``const double pi = 3.14;``  
 ``const double *cptr = pi;``  
-指针指向一个常量
+**指针所指内容不可变**
 
 常量指针(const pointer)  
 ``double pi = 3.14;``  
 ``double *const cstp = pi;``  
-指针的指向不变
+**指针的指向地址不可变**
 
 顶层const：指针本身是个常量
 底层const：指针所指的对象是个常量
