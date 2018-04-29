@@ -13,7 +13,7 @@ tags:
 
 题意：给一个字符串，是由``()``, ``?``, ``数字``组成的表达式；
 ``?``可以变成``+/-``，问这个表达的最大值；
-字符串长$1e4$，``+/-``中少的那个不超过100；
+字符串长$1e4$，``+/-``中少的那个不超过$100$；
 
 思路是先把表达式树建出来，然后在树上DP；
 对于每棵子树，开一个``vector<pair<int,int>> tree``，$tree[i]$表示tree这棵子树用了$i$个``+/-``运算符时的最值情况；
@@ -73,7 +73,7 @@ vector<pii> dfs(const shared_ptr<Node> & o, int cnt, bool add) {
   vector<pii> L(dfs(o->chs[0], cnt, add));
   vector<pii> R(dfs(o->chs[1], cnt, add));
 
-  vector<pii> ans(min(cnt + 1, (int)(L.size() + R.size())), {1e9, -1e9});
+  vector<pii> ans(min(cnt, (int)(L.size() + R.size())) + 1, {1e9, -1e9});
   for (int i = 0; i < (int)L.size(); ++i) {
     pii l(L[i]);
     for (int j = 0; j < (int)R.size(); ++j) {
