@@ -1,6 +1,7 @@
 ---
 title: Codeforces935E
 date: 2018-04-30 00:18:46
+mathjax: true
 categories:
   - algorithm
   - Codeforces
