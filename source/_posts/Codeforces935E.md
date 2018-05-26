@@ -73,7 +73,7 @@ vector<pii> dfs(const shared_ptr<Node> & o, int cnt, bool add) {
   vector<pii> L(dfs(o->chs[0], cnt, add));
   vector<pii> R(dfs(o->chs[1], cnt, add));
 
-  vector<pii> ans(min(cnt, (int)(L.size() + R.size())) + 1, {1e9, -1e9});
+  vector<pii> ans(min(1 + cnt, (int)(L.size() + R.size())), {1e9, -1e9});
   for (int i = 0; i < (int)L.size(); ++i) {
     pii l(L[i]);
     for (int j = 0; j < (int)R.size(); ++j) {
